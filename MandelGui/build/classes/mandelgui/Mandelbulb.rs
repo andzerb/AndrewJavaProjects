@@ -1,0 +1,2 @@
+mandelgui.TriplexNumbers
+mandelgui.Mandelbulb
