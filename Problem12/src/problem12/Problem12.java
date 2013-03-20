@@ -13,32 +13,27 @@ public class Problem12 {
     /**
      * @param args the command line arguments
      */
-    public static int Factorssimple(int num){
-        int numFactors = 0;
+    public static long Factorssimple(long num) {
+        long numFactors = 0;
         System.out.println("factoring " + num);
-        for(int i = 1; i <= Math.sqrt(num); i++){
-          System.out.println(i);
-          if(num % i == 0 && Math.sqrt(num)!= i){
-              System.out.println("!");
-              numFactors+=2;
-            
-          }else{ 
-             if(Math.sqrt(num)== i){
-                System.out.println(num + " square!");
-                numFactors++; 
-             }  
-          }
+        for (long i = 1; i <= num; i++) {
+            if (num % i == 0) {
+               numFactors++;
+            }
         }
-        return numFactors;
-        
-        
+         return numFactors;
     }
+    
+   
     public static void main(String[] args) {
-       
-        for(int i = 1; i <= 102; i++){
-           int tri = (i*(i+1))/2;
-           int fact = Factorssimple(tri);
+        long fact = 0;
+        for(long i = 1; fact <=500; i++){
+           long tri = (i*(i+1))/2;
+            fact = Factorssimple(tri);
            System.out.println("factors: " + fact);
+          
         }
+        System.out.println("greater than 500! " + fact);
     }
 }
+
